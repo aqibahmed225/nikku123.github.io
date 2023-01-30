@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>#AskNikki - Search Engine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .search-container {
+  display: inline-block;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .search-container {
+    width: 90%;
+  }
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  width: 70%;
+  outline: none;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #3E8E41;
+}
+</style>
+</head>
+<body>
+  <h1>#AskNikki - Search Engine</h1>
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search on #AskNikki...">
+      <input type="submit" value="Search">
+    </form>
+  </div>
+  <script>
+    const form = document.querySelector("form");
+    const input = document.querySelector("input[type='text']");
+    form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const searchTerm = input.value;
+
+  if (searchTerm) {
+    window.location.href = `https://www.wikipedia.org/w/index.php?title=Special:Search&limit=20&offset=0&ns0=1&ns6=1&ns14=1&ns100=1&ns110=1&ns114=1&ns828=1&ns829=1&ns2300=1&ns2301=1&ns2302=1&ns2600=1&ns-1=1&ns-2=1&ns-3=1&ns-8=1&ns-11=1&ns-12=1&ns-13=1&ns-14=1&ns-100=1&ns-101=1&ns-102=1&ns-108=1&ns-109=1&ns-110=1&ns-111=1&ns-114=1&ns-119=1&ns-828=1&ns-829
+    =1&ns-2300=1&ns-2301=1&ns-2302=1&ns-2600=1&search=${searchTerm}`;
+}
+});
+</script>
+
+</body>
+</html>
